@@ -5,7 +5,7 @@ Deployment of a RESTEasy Quarkus application to IBM Cloud Engine
 - JDK 11+ any distribution
 - docker
 - (optional) GraalVM
-- (optioonal) Maven or Gradle
+- (optional) Maven or Gradle
 - ibmcloud CLI
 
 ## Demo overview
@@ -22,9 +22,11 @@ Deployment of a RESTEasy Quarkus application to IBM Cloud Engine
 6. `mvn package -Pnative -Dquarkus.native.container-build=true`
 7. `docker build -f src/main/docker/Dockerfile.native -t <repo>/hello-resteasy .`
 8. `docker push demo/hello-resteasy`
-9. `ibmcloud login`
-10. `ibmcloud target -g <group_name>`
-11. Optionally, install code engine plugin: `ibmcloud plugin install code-engine -f`
-13. `ibmcloud ce project select --name <project_name>`
-14. `ibmcloud ce app list`
-15. `ibmcloud ce application create --name myapp --image <repo>/hello-resteasy`
+9. Create a free IBM Cloud account using the following link: https://ibm.biz/l_heure_du_dev
+10. Login to ibm cloud using the CLI
+- `ibmcloud login`
+- `ibmcloud target -g <group_name>`
+13. Optionally, install code engine plugin: `ibmcloud plugin install code-engine -f`
+14. `ibmcloud ce project select --name <project_name>`
+15. `ibmcloud ce app list`
+16. `ibmcloud ce application create --name <app_name> --image <repo>/hello-resteasy`
