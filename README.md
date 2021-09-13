@@ -75,6 +75,11 @@ Push docker image using:
 
 ### Push to IBM Cloud Code Engine
 Create a free IBM Cloud account using the following link: https://ibm.biz/l_heure_du_dev
+
+Connect to IBM cloud and go to Code engine interface: https://cloud.ibm.com/codeengine/overview
+
+Create a project in the UI.
+
 Login to ibm cloud using the CLI and target a specific group
 
 ```
